@@ -1,13 +1,94 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "GilroyRegular";
+  src: url("./assets/fonts/Gilroy-Regular.ttf");
+}
+@font-face {
+  font-family: "GilroyMedium";
+  src: url("./assets/fonts/Gilroy-Medium.ttf");
+}
+@font-face {
+  font-family: "GilroySemibold";
+  src: url("./assets/fonts/Gilroy-SemiBold.ttf");
+}
+@font-face {
+  font-family: "GilroyBold";
+  src: url("./assets/fonts/Gilroy-Bold.ttf");
+}
+html {
+  scroll-behavior: smooth;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  font-family: "GilroyRegular";
+  color: #1a1a1a;
+  overflow-x: hidden;
+}
+.hero-bg {
+  background: url("./assets/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.active-link:hover {
+  border-bottom: 1px solid #000;
+  padding-bottom: 5px;
+}
+
+.quote-bg,
+.footer-bg {
+  background: linear-gradient(
+      101.56deg,
+      #1f4690 -1.2%,
+      #3a5ba0 50.29%,
+      #597cc5 78.27%,
+      #5483e4 96.29%
+    ),
+    #d9d9d9;
+}
+.hero-border {
+  border-top: 0.5px solid rgba(159, 162, 180, 0.5);
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.width {
+  @apply md:w-[85%] m-auto px-3 md:px-0;
+}
+.heading {
+  @apply font-['GilroySemibold'] text-3xl md:text-4xl;
+}
+.subHeading {
+  @apply text-primary font-['GilroyBold'] uppercase tracking-[0.1em] mb-2 block;
+}
+.button {
+  @apply rounded-md font-['GilroyBold'] uppercase text-white text-xl px-10 py-2;
+}
+.buttonTwo {
+  @apply bg-transparent rounded-md font-['GilroyBold'] uppercase text-xl px-6 py-2 border-[3px] border-solid;
+}
+.call {
+  @apply text-white bg-primary p-4 text-2xl md:text-3xl fixed md:absolute right-[20px] rounded-full z-20;
+}
+.hover-link:hover {
+  @apply text-primary border-b-[1px] border-solid border-primary pb-2;
+}
+.methodology-card {
+  @apply px-4 md:px-16 py-8 md:py-20 flex flex-col md:flex-row gap-8 md:gap-0 justify-between items-center;
+}
+.methodology-content {
+  @apply basis-3/5 w-full flex flex-col;
+}
+.methodology-content h5 {
+  @apply text-[32px] font-['GilroyBold'] leading-[39px] tracking-[0.1em];
+}
+.methodology-content span {
+  @apply text-xl font-['GilroyBold'] tracking-[0.1em] mt-5 mb-2;
+}
+.methodology-content p {
+  @apply text-xl font-['GilroyMedium'] text-[#000000];
 }
