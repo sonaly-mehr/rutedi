@@ -6,7 +6,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 
 const Hero = () => {
   return (
-    <div className="hero-bg h-[80vh] md:h-[115vh] relative">
+    <div className="hero-bg h-[800px] md:h-[115vh] relative">
       <Navbar />
       <div className="hero-border">
         <div className="w-full md:relative left-0 md:top-[50%] md:translate-y-[50%] px-3 md:px-0 pt-10 md:pt-0">
@@ -39,7 +39,7 @@ const Hero = () => {
       </a>
 
       <div>
-        <a href="/#" className="call bottom-[10%] md:bottom-[7%]">
+        <a href="/#" className="text-white bg-primary p-4 text-2xl md:text-3xl fixed right-[20px] rounded-full z-20 bottom-[5%]">
           <FaPhoneAlt />
         </a>
       </div>

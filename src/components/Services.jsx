@@ -77,14 +77,6 @@ const Services = () => {
           </div>
         ))}
       </div>
-
-      <div className="hidden md:block">
-        <div>
-          <a href="/#" className="call bottom-0">
-            <FaPhoneAlt />
-          </a>
-        </div>
-      </div>
     </div>
   );
 };
