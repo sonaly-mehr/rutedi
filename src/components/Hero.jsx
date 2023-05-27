@@ -39,7 +39,7 @@ const Hero = () => {
       </a>
 
       <div>
-        <a href="/#" className="call top-[60%] md:bottom-[7%]">
+        <a href="/#" className="call bottom-[10%] md:bottom-[7%]">
           <FaPhoneAlt />
         </a>
       </div>
